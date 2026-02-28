@@ -2,10 +2,11 @@
 
 ## Topics
 
-- Arrays
+- Arrays_and_Strings
 - Strings
+- Hashing
 
-### Arrays
+### Arrays_and_Strings
 
 1. Two Sum
    - Brute force was to iterate with 2 loops and return the matching sum's index values.

@@ -1,4 +1,4 @@
-package Arrays;
+package Arrays_and_Strings;
 
 public class ValidPalindrome {
     public static void main(String[] args) {

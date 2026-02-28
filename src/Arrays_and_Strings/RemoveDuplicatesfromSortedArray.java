@@ -1,7 +1,4 @@
-package Arrays;
-
-import java.util.HashSet;
-import java.util.Set;
+package Arrays_and_Strings;
 
 public class RemoveDuplicatesfromSortedArray {
     public static void main(String[] args) {

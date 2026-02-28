@@ -1,7 +1,4 @@
-package Arrays;
-
-import java.util.ArrayList;
-import java.util.*;
+package Arrays_and_Strings;
 
 public class ZigZagConversion {
     public static void main(String[] args) {
