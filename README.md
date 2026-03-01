@@ -50,3 +50,18 @@
     - Solution is to get each word as a string, sort it in lexicographically order using charArray() and merge it again as string.
     - Check if the hashmap for the sorted word has an array, if yes add the original word to that array using the sorted word as a key.
     - If no, create a new ArrayList<> for that key and do the above step.
+
+10. Top K Frequent Elements
+    - Use a hashmap to store the value and its count
+    - Use map.entrySet() to get the key-value pairs in array, make into a stream, sort based on b-a conditon, limit upto k elements, reduce map to int with only keys and convert into a array.
+    - Optimized solution is to use a priority queue (min heap), offer the values, if the limit exceeds k, poll the value and continue the process of offering and polling.
+    - Convert into an array with only k key values.
+
+11. Encode Decode Strings
+    - The idea is to create an encoded string using the array of words.
+    - We can append all the words in a single string using a unique pattern which is 'length_of_word+#+word'.
+    - Now to decode is to reverse the process by iterating till getting #, get the length, extract the word using the length, add it to array and repeat for the remaining words.
+
+12. Product of an Array except itself
+    - Brute force is to get the product and divide the product with each value in the array.
+    - Optimised solution would be to get the prefix product and suffix product and multiply both the individual values from the 2 arrays and store it in a final result array.
