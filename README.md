@@ -2,9 +2,11 @@
 
 ## Topics
 
-- Arrays_and_Strings
+- Arrays
 - Strings
 - Hashing
+- Prefix and Suffix Manipulation
+- Java Streams
 
 ### Arrays_and_Strings
 
@@ -65,3 +67,15 @@
 12. Product of an Array except itself
     - Brute force is to get the product and divide the product with each value in the array.
     - Optimised solution would be to get the prefix product and suffix product and multiply both the individual values from the 2 arrays and store it in a final result array.
+
+13. Largest Consecutive Sequence
+    - The main rule is you need to understand time complexity of O(N) and O(N^2).
+    - Hold a max_count global variable.
+    - First we need to add the values in the hashset to reduce duplicates and get O(1) fetching.
+    - Next starting iterating through all the values in the set.
+    - maintain a condition to start the sequence count if the value-1 is not in the set, meaning if the predecessor is already in the set means, skip the inner loop.
+    - if the condition is true (No predecessor), start the count and keep track of the current num and increment the current_num and cuurent_count if the current_num + 1 is present in the set, else get the max_count using the current_count and max_count global variable.
+
+14. Two Sum Input Array is sorted
+    - Same as two sum, but when returning the index array, increment both the values by 1.
+    - 

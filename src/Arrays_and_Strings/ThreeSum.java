@@ -2,7 +2,7 @@ package Arrays_and_Strings;
 
 import java.util.ArrayList;
 import java.util.List;
-
+// pending to be solved
 public class ThreeSum {
     public static void main(String[] args) {
         List<List<Integer>> list = new ArrayList<>();
