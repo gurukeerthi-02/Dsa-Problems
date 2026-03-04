@@ -74,8 +74,32 @@
     - First we need to add the values in the hashset to reduce duplicates and get O(1) fetching.
     - Next starting iterating through all the values in the set.
     - maintain a condition to start the sequence count if the value-1 is not in the set, meaning if the predecessor is already in the set means, skip the inner loop.
-    - if the condition is true (No predecessor), start the count and keep track of the current num and increment the current_num and cuurent_count if the current_num + 1 is present in the set, else get the max_count using the current_count and max_count global variable.
+    - if the condition is true (No predecessor), start the count and keep track of the current num and increment the current_num and current_count if the current_num + 1 is present in the set, else get the max_count using the current_count and max_count global variable.
 
 14. Two Sum Input Array is sorted
     - Same as two sum, but when returning the index array, increment both the values by 1.
-    - 
+
+15. Best time to Buy and Sell Stock
+    - The idea is to iterate through every value starting from 1st index position keeping the 0th index position value as the temp minimum value.
+    - if the current value[i] is lesser than the minimum value in temp, replace it and update the new minimum value.
+    - else, update the max_profit by checking whether the current max_profit is greater or current value - minimum value is greater for the profit.
+    - To optimise the solution, instead of using the Math.max func, we can check if the minimum value - current value is greater than the current max_profit, simply replace the max_profit with current_value - minimum value.
+
+16. Sudoku Valid
+    - Same as Sudoku solver in backtracking, but here we will use a hashset to check for the entry exists or not based on the condition !set.add(num+ " in row "+ i) ||
+      !set.add(num+ " in column "+ j) ||
+      !set.add(num+ " in block "+ i/3+"-"+j/3))
+    - if false, then return false, else true.
+
+
+## Backtracking
+
+1. Sudoku Solver
+   - The concept is to check all the rows, columns and individual boxes from 0 to 9 have no duplicate values.
+   - First we check for each values in the sudoku and start solving when we reach a value '.'.
+   - For each dot, we will try all the possible solutions using a checker function.
+   - In the checker function, we will check if all the rows in i th and all the cols in the ith do not have the value.
+   - Along with, we need to check for the particular sub box also, so we use rowsBox = 3*(rows/3) + i/3 and for colsBox = 3*(cols/3) + i%3.
+   - if the checker functions passes, about the value in the board and again call the same function to finalise our board value correct or not.
+   - If fails, we can backtrack and rectify our error.
+   - Continue till the board is fully solved.

@@ -9,12 +9,12 @@ public class ValidPalindrome {
         int last = input.length()-1;
         while(first < last){
             if(!(input.charAt(first) == input.charAt(last))){
-                System.out.println("Not a valid palindrome");
+                System.out.println("Not a solve palindrome");
             }
             first++;
             last--;
         }
-        System.out.println("Palindrome is valid");
+        System.out.println("Palindrome is solve");
 
     }
 }
