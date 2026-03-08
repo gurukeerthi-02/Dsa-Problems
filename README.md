@@ -91,6 +91,11 @@
       !set.add(num+ " in block "+ i/3+"-"+j/3))
     - if false, then return false, else true.
 
+17. Longest Consecutive Substring
+    - The brute force idea is to use an arraylist and add the characters one by one and compute their length to update the length of the longest substring.
+    - if the duplicate character arrives, loop and remove the values in the list from the first position till the duplicate is not found in the list.
+    - To optimize the solution, use a hashset, since the lookup times reduces from O(n) to O(1) and avoid the use of Math.max function and compute the length using right - left + 1 pointer concept.
+
 
 ## Backtracking
 
