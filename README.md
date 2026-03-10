@@ -96,7 +96,19 @@
     - if the duplicate character arrives, loop and remove the values in the list from the first position till the duplicate is not found in the list.
     - To optimize the solution, use a hashset, since the lookup times reduces from O(n) to O(1) and avoid the use of Math.max function and compute the length using right - left + 1 pointer concept.
 
+18. Longest Common Prefix
+    - The solution is simple, sort the arrays, compare characters of first word and last word and break when the characters mismatch.
+    - if the match, add it in the string builder and continue.
 
+19. Remove Duplicates from Sorted Array 2
+    - The idea is to check whether the arr[i] != arr[k-2] since we need to check if it has more than 2 duplicates, then we replace it.
+    - Initialize k =2 and when return, K+1 is not needed.
+
+20. Minimum Size Subarray Sum
+    - The idea is to keep on adding the values in a sum variable and check if it is equal or exceeds the target.
+    - If it exceeds, use another loop to compute the min_length and remove the first value added in the sum variable and continue the loop till the sum is less than target.
+    - Again continue first step and return the result by adding plus 1 since arrays start from 0 index position.
+    - Use Integer.MAX_VALUE for min_length initial value and to solve the edge-case, when returning the value, check if it is not equal to Integer.MAX_VALUE, else return 0.
 ## Backtracking
 
 1. Sudoku Solver
